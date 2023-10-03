@@ -4,11 +4,22 @@ import {Button, Container} from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
+import { useState } from 'react';
+import Mymodal from './Mymodal';
+
 
 const Header = () => {
+
+  const [show, setShow] = useState(false);
+
+
+
+
   return (
-    <Container    fluid  className='background' >
-         <MyNav/>
+    <Container  fluid   className='background ' >
+         <MyNav  setShow = {setShow} show={show} />
+         {show && <Mymodal  show={show}
+        onHide={() => setShow(false)} />}
          
          <Row className='text'>
         <Col  xs={12} lg={5}  >

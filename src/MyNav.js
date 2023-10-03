@@ -8,8 +8,16 @@ import cart from './images/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIH
 
 
 
-const MyNav = () => {
+const MyNav = ({setShow,show}) => {
+  const toggle = ()=>{
+    setShow(!show)
+
+
+  }
+
+
   return (
+
     
     <Navbar collapseOnSelect expand="lg" className="background">
     <Container style={{marginLeft:"2vw"}} fluid>
@@ -27,7 +35,7 @@ const MyNav = () => {
         </Nav>
 
     <Nav style={{marginLeft:"6vw"}} >
-      <Nav.Link style={{color:"white"}}> <img src={cart} alt="" srcset="" /> </Nav.Link>
+      <Nav.Link onClick={toggle} style={{color:"white"}}> <img  src={cart} alt="" srcset="" /> </Nav.Link>
 
 
 
@@ -42,6 +50,8 @@ const MyNav = () => {
      
    
       </Navbar>
+
+
         
       
   
