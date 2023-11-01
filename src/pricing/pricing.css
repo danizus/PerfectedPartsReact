@@ -1,0 +1,168 @@
+.pricing-sec{
+    padding-top: 10vh;
+      background: #f6f7fa;
+}
+
+
+
+.pricing-heading{
+    font-family: Orbitron;
+}
+
+.pricing-sec .nav-tabs{
+border-radius: 50px;
+  background: #fff;
+  width: max-content;
+  margin: auto;
+}
+.pricing-sec .nav-tabs .nav-link.active{
+    border-radius: 50px;
+  background: #51BE69 ;
+  color: #fff;
+  
+ 
+}
+.pricing-sec .nav-tabs .nav-link{
+    border-radius: 100px;
+     padding: 10px 40px;
+     color: black;
+     font-family: Orbitron;
+  
+ 
+}
+.tabs-para{
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: inter;
+}
+
+/* tabs output*/
+
+.monthly-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 5vh 0;
+    padding-bottom:50px ;
+}
+
+.monthly-box{
+border-radius: 32px;
+border: 3px solid rgba(40, 114, 225, 0.50);
+display: flex;
+width: 32%;
+
+padding: 24px;
+flex-direction: column;
+
+gap: 24px;
+background: #FFF;
+justify-content:center ;
+}
+.pricing-sec .cross >li{
+    font-size: 14px;
+
+}
+.monthly-box>h2{
+    text-align: center;
+    font-size: 42px;
+    font-family: Orbitron;
+    color: #51BE69;
+}
+.monthly-box>p{
+    
+    display: inline-block;
+    margin:0 auto;
+    width: 80%;
+}
+.inventory{
+    max-width: 600px;
+
+}
+.inventory>h2{
+   font-family:Orbitron ;
+   font-size: 42px;
+   margin: 2vh auto;
+
+}
+.inventory>p{
+    font-family:inter ;
+   margin: 5vh auto;
+
+}
+.contact-box{
+display: flex;
+padding: 32px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+gap: 32px;
+align-self: stretch;
+border-radius: 32px;
+border: 3px solid rgba(40, 114, 225, 0.50);
+width: 70%;
+margin: 10vh auto;
+background: #FFF;
+
+}
+.yearly-container{
+    padding-bottom:40px ;
+}
+.form-edits-yearly{
+        width: 100%;
+        padding:5%
+}
+.contact-box>h2{
+    margin :2px auto;
+    font-family: Orbitron;
+    font-size: 32px;
+    text-align: center;
+}
+.contact-box{
+    padding: 5% 7%;
+
+}
+.callus{
+    padding: 50px 0;
+    color: black;
+}
+
+@media only screen and (max-width: 992px) {
+    .pricing-sec .nav-tabs{
+        flex-direction: column;
+
+    }
+    .tabs-heading{
+        font-size: 20px;
+    } 
+    .monthly-container{
+        flex-direction: column;
+    }
+    .monthly-box{
+       width: 90%; 
+       margin: 2.5vh auto;
+    }
+    .inventory{
+        margin:2.5vh auto;
+        
+    }
+    .callus>h2{
+        padding: 50px;
+        color: black;
+        margin-top:10px ;
+    }
+    .contact-box>h2{
+        font-size: 20px;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .inventory{
+        padding: 0 50px;
+        width:100%
+    }
+    .inventory>img{
+        width:400px ;
+      
+    }
+}
+   

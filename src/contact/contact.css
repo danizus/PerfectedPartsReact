@@ -1,0 +1,45 @@
+.form-edit{
+    margin: 40px auto;
+    padding:40px
+}
+
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.picture-right{
+
+    margin-right:5%
+ }
+
+@media only screen and (max-width: 600px) {
+
+    .form-container{
+    
+        padding: 40px;
+    }
+    .form-pic{
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 992px) {
+    .form-container{
+    
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+    .picture-right{
+
+        margin:30px auto;
+    
+    }
+
+   
+
+
+}

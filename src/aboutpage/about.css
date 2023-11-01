@@ -1,0 +1,209 @@
+*{
+    margin:0
+}
+.nav-background{
+    background-image:url("../images/page-title.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 50vh;
+    background-position: bottom;
+    
+
+}
+.main-div{
+    display:flex;
+    
+}
+
+.title{
+    margin:13vh 5vh;
+    color: white;
+}
+
+.about-large{
+    font-size: 56px !important;
+    font-family: Orbitron;
+    
+
+}
+.about-small{
+    font-size: 18px;
+    font-family: inter;
+}
+
+.section2{
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+.welcome{
+   margin: 10vh auto;
+    
+}
+.welcome-heading{
+    margin-top:10vh ;
+}
+.new-container{
+    margin-top: 10vh;
+}
+.About-image{
+    margin-top: 15vh;
+    background-image: url("../images/aboutpagepic.jpg");
+    height: 60vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+}
+.About-2ndimage{
+    margin-top: 15vh;
+    background-image: url("../images/secondabout.jpg");
+
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding:20vh 0;
+   
+
+    
+   
+    
+
+}
+
+.our-values{
+    color:#51BE69;
+    font-size: 56px;
+}
+.our-value-top{
+    margin-top:4vh ;
+
+}
+.main-values-container{
+
+    display: flex;
+    justify-content: space-evenly;
+   
+
+
+
+}
+.each-values{
+    margin-top: 5%;
+    width: 25%;
+    color:white;
+    border: 2px solid #4B4B4B;
+    border-radius: 5%;
+
+}
+.consultantsContainer{
+    margin-top: 12vh;
+}
+.titleConsultant{
+    font-size: 40px;
+    color: black;
+    text-transform: uppercase;
+    font-family: Orbitron;
+    
+}
+.advisor{
+    font-size: 32px;
+    font-family: Orbitron;
+    font-weight: lighter;
+}
+.advisor-container{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 20vh;
+}
+@media only screen and (max-width: 600px) {
+    .about-large{
+        font-size: 36px;
+    }
+    .about-small{
+        font-size: 16px;
+    }
+    .our-values{
+        
+        font-size: 36px;
+    }
+    .about-large{
+        font-size: 40px !important;
+    }
+    .welcome{
+      
+        padding: 40px;
+    }
+   
+
+
+}
+
+@media only screen and (min-width: 600px) {
+    .about-large{
+        font-size: 36px;
+    }
+    .about-small{
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .welcome-heading{
+        margin-top:0;
+    }
+ .new-container{
+    padding: 50px;
+ }
+ .main-values-container{
+    flex-direction: column;
+ }
+ .each-values{
+    width: 100% !important;
+ }
+ .About-2ndimage{
+    margin-top: 0vh;
+    background-image: url("../images/secondabout.jpg");
+
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding:20vh 2vh;
+
+}
+    
+
+}
+@media only screen and (max-width: 992px) {
+    .About-image{
+        margin: 2vh 0;
+        margin-bottom: 10vh;
+        height: 20vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+      
+        
+    }
+    .advisor-container{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        margin-top: 0;
+    }
+    .consultantsContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:black;
+        justify-content: center;
+        margin: 10vh auto;
+    }
+    
+}
+
+
