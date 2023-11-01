@@ -24,11 +24,12 @@ const Productpage = ({ show, setShow }) => {
 
 
   const myProduct = items.find(item=> item.id === product.id)
+  
 
   const [count, setCount] = useState(0);
   useEffect(() => {
     dispatch(add({...product,quantity:1}))
-    setCount(myProduct.quantity)
+    // setCount(myProduct.quantity)
     
   }, []);
   
@@ -43,6 +44,7 @@ const Productpage = ({ show, setShow }) => {
       
     }
     dispatch(remove(product.id))
+    setCount(myProduct.quantity+1)
     
   
   };
@@ -50,7 +52,7 @@ const Productpage = ({ show, setShow }) => {
    
     dispatch(add({...product,quantity:1}))
     
-    setCount(myProduct.quantity+1);
+    setCount(myProduct.quantity);
   };
 
   return (

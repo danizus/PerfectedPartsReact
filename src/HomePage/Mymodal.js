@@ -46,7 +46,7 @@ const Mymodal = (props) => {
               <div style={{display:"inline"}}><img width="40px" src={product.image} alt="" /></div>
               <h7 >{`${product.quantity}X${product.name}`}</h7>
               <p >
-              {product.price}
+              {product.quantity*product.price}
               </p>
             </div>
             <div onClick={()=>handleRemove(product.id)}>

@@ -6,7 +6,8 @@ import { createSlice,current } from "@reduxjs/toolkit"
 const cartSlice =createSlice({
     name: 'cart',
     initialState :{
-        cart:[]
+        cart:[],
+        count:0
     },
    
     reducers:{
@@ -16,6 +17,7 @@ const cartSlice =createSlice({
           if(sameItem){
             sameItem.quantity +=1
             console.log(sameItem.quantity)
+            state.count+=1
           }else{
             state.cart.push({
                 id:action.payload.id,
@@ -24,6 +26,7 @@ const cartSlice =createSlice({
                 price:action.payload.price,
                 quantity:action.payload.quantity
             });
+            state.count+=1
 
           }
          
@@ -33,13 +36,11 @@ const cartSlice =createSlice({
         },
         remove(state,action){
           const productToRemove =  state.cart.find(item => item.id===action.payload)
-            if(productToRemove.quantity===1){
-                return state.filter(item=>item.id!==action.payload);
-
-            }else {
-                productToRemove.quantity-=1
+            if(productToRemove.quantity>1){
+                return state.cart.filter(item=>item.id!==action.payload);
 
             }
+            productToRemove.quantity-=1
 
             
         }
