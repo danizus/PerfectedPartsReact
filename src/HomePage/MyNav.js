@@ -13,7 +13,7 @@ import uncheckedhover from "../images/unchecked.svg";
 import { useSelector } from "react-redux";
 
 const MyNav = ({ setShow, show }) => {
-  const item = useSelector((state) => state.cart.cart);
+  const item = useSelector((state) => state.cart);
 
   const toggle = () => {
     setShow(!show);
@@ -62,7 +62,7 @@ const MyNav = ({ setShow, show }) => {
                 style={{ backgroundColor: "#51be69" }}
                 className="position-absolute top-0 start-100 translate-middle badge rounded-pill fw-normal"
               >
-                {item.length}
+                {item.length>0?item.length:"0"}
               </span>{" "}
               <img src={cartImg} alt="cart" />{" "}
             </a>

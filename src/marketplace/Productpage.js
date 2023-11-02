@@ -16,44 +16,37 @@ import { add, remove } from "../store/cartSlice";
 const Productpage = ({ show, setShow }) => {
   const myid = useParams();
   const dispatch = useDispatch();
-  const items = useSelector((state) => state.cart.cart);
-
+  const items = useSelector((state) => state.cart);
   const product = products.find((item) => {
     return item.id == myid.id;
   });
 
 
-  const myProduct = items.find(item=> item.id === product.id)
-  
 
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    dispatch(add({...product,quantity:1}))
-    // setCount(myProduct.quantity)
-    
-  }, []);
-  
-
-
-
-
+  const [count, setCount] = useState(1);
 
   const countOrderMinus = () => {
-    if (count <= 0) {
-     return setCount(0);
+    if (count <= 1) {
+     return setCount(1);
       
     }
-    dispatch(remove(product.id))
-    setCount(myProduct.quantity+1)
+ 
+    setCount(count-1);
     
   
   };
   const countOrderPlus = () => {
    
-    dispatch(add({...product,quantity:1}))
-    
-    setCount(myProduct.quantity);
+    setCount(count+1);
   };
+
+  const addProducts=(count)=>{
+    dispatch(add({...product,"quantity":count}))
+    
+    
+
+
+  }
 
   return (
     <>
@@ -109,6 +102,9 @@ const Productpage = ({ show, setShow }) => {
                 </span>
               </button>
             </div>
+
+<button  onClick={()=>addProducts(count)}>add product</button>
+
           </div>
         </div>
       </Container>

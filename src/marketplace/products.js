@@ -14,6 +14,7 @@ const products = [
       "description": "Lo rem ipsum dolor sit amet consectetur. Scelerisque etiam massa bibendum auctor faucibus.",
       "price": 8212.99,
       "image": p1
+      
     },
     {
       "id":2,

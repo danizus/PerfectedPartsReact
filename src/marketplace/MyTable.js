@@ -31,7 +31,7 @@ const MyTable = () => {
    <>
    {info.map(item=><ul>
 
-       <li style={{display:"flex",fontFamily:"Orbitron",justifyContent:"space-between"}}> <TopList item={item.label}/><i onClick={item.label=="BODY PARTS"?handleClick:handleClick1} class="fa-solid fa-chevron-down clicked"></i></li>
+       <li style={{display:"flex",justifyContent:"space-between"}}> <TopList item={item.label}/><i onClick={item.label=="BODY PARTS"?handleClick:handleClick1} class="fa-solid fa-chevron-down clicked"></i></li>
        <li style={{marginLeft:"10px"}}>{item.label=="BODY PARTS"?<Sublist info={item.label}    body={body} item={item.subs}/>:<Sublist1 info={item.label} engine={engine} item={item.subs}/>}</li>
 
    </ul>

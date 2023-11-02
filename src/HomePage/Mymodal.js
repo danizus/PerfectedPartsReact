@@ -5,10 +5,13 @@ import CloseButton from 'react-bootstrap/CloseButton';
 import MyButton from './MyButton';
 import { useDispatch, useSelector } from 'react-redux';
 import {remove} from "../store/cartSlice"
+import { Link, useParams } from 'react-router-dom';
 
 
 const Mymodal = (props) => {
-  const item = useSelector((state)=>state.cart.cart) ;
+  const item = useSelector((state)=>state.cart) ;
+  const myid = useParams();
+  
   
   const dispatch = useDispatch();
 
@@ -44,13 +47,14 @@ const Mymodal = (props) => {
           <div style={{ borderBottom: "1px solid grey", display: "flex", justifyContent: "space-between" }}>
             <div>
               <div style={{display:"inline"}}><img width="40px" src={product.image} alt="" /></div>
-              <h7 >{`${product.quantity}X${product.name}`}</h7>
+              <h7 >{`${product.quantity} X ${product.name}`}</h7>
               <p >
               {product.quantity*product.price}
               </p>
             </div>
             <div onClick={()=>handleRemove(product.id)}>
             <CloseButton />
+            
           </div>
           </div>
         
@@ -63,6 +67,7 @@ const Mymodal = (props) => {
       </div>))}
       <Modal.Footer>
           <MyButton text={"close"} />
+          <Link to={`/checkout/${myid}`}><button >Continue shopping</button></Link>
         </Modal.Footer>
      
     </Modal>

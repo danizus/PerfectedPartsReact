@@ -1,7 +1,17 @@
+.input-group-text{
+    border-right: 1px solid #f5f5f5;
+}
+
 
 .search-container{
     margin-top:10vh ;
 
+}
+.search-container .form-select{
+   background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2.25C0 1.93359 0.105469 1.65234 0.316406 1.44141C0.738281 0.984375 1.47656 0.984375 1.89844 1.44141L6.75 6.25781L11.5664 1.44141C11.9883 0.984375 12.7266 0.984375 13.1484 1.44141C13.6055 1.86328 13.6055 2.60156 13.1484 3.02344L7.52344 8.64844C7.10156 9.10547 6.36328 9.10547 5.94141 8.64844L0.316406 3.02344C0.105469 2.8125 0 2.53125 0 2.25Z' fill='white'/%3E%3C/svg%3E%0A")
+}
+.search-container .form-select option:hover{
+  background-color: #51be69;
 }
 
 .input-group {
@@ -9,10 +19,13 @@
    
     
 }
-.search-container>.form-control{
+.search-container .form-control{
  background-color: #f5f5f5;
+ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+  outline: 0 none;
  padding: 10px;
  font-family:Orbitron;
+ border-left: 1px solid #f5f5f5;
 }
 .form-control:focus{
  background-color: #f5f5f5;
@@ -22,11 +35,19 @@
   outline: 0 none;
 }
 
-.search-result-container{
-    display: flex;
-    justify-content: space-between;
+
+.search-result-container .select{
+    text-align:left; 
+    color:white;
+    font-family:Orbitron;
+    background-color:#57bf6c;
+    width: 100% !important;
+
 
 }
+
+
+
 card{
     border:none
 }
@@ -56,10 +77,11 @@ border: none;
 width: 100%;
 
 }
-table  a {
+table .depth-0 a {
 color:black;
-font-family: Orbitron;
-font-weight: 100;
+font-family:Orbitron;
+
+font-weight: 0;
 }
 
 .depth-1 button{
@@ -68,15 +90,20 @@ font-weight: 100;
 
 }
 .depth-1 div{
+    font-family:Orbitron;
     display:flex;
     justify-content:space-between ;
+    color: black;
    }
-.depth-1 div{
+.depth-1 div a{
 margin-left: 10px;
+color: black;
 
    }
-.depth-2 div{
+.depth-2 div a{
     margin-left: 20px;
+    font-family: inter !important;
+    color: black;
 }
 
 .product-nav{
@@ -125,11 +152,8 @@ margin: 4px 15px;
    padding: 16px 20px;
 
 }
-.select-option{
- width: 220px;
-padding: 16px 20px;
 
-}
+
 
 
 
