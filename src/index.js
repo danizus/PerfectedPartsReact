@@ -4,10 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import store from './store/store';
+
+const container = document.getElementById('root')
+const root = ReactDOM.createRoot(container);
+
 root.render(
   <React.StrictMode>
-    <App />
+   
+   
+  <App/>
+  
+
   </React.StrictMode>
 );
 

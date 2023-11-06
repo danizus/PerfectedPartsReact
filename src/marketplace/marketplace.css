@@ -152,9 +152,110 @@ margin: 4px 15px;
    padding: 16px 20px;
 
 }
+.qty-container{
+   
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+    
+   
+}
+.qty-container .l{
+   
+    background-color: white;
+    display: flex;
+}
+.qty-container .quantity-buttons{
+    border: 2px solid black;
+}
+.qty-container .qty{
+   margin: 0 25px;
+   
+}
+.qty-container button{
+    background-color: #fbfbfb;
+    border: 1px solid #dcdcdc;
+
+   
+}
+
+.check-out-container {
+    margin-top: 5vh;
+    padding:5% 7%;
+    width: 100%;
+    background-color: #f5f5f5 ;
+    display :flex;
+   
+    
+}
+.total-container{
+    background-color: #f5f5f5 ;
+    padding:20px;
+}
+.check-out-container h3 {
+    margin: 10px;
+    font-size: 16px;
+}
+.row{
+    margin-top: 10vh;
+}
+.check-out-container img{
+    max-width: 30%;
+   border:2px solid grey;
+   margin: 10px;
+}
+
+.Toastify__toast-body{
+    font-family: Orbitron ;
+    
+}
+.total-container .btn {
+    border-radius: 0;
+
+}
+.checkout-button{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    color: black;
 
 
+}
+.checkout-btn{
+    background-color:#57bf6c;
+    border-color:#57bf6c;
+    width:100%;
+    font-family:Orbitron;
+    padding: 10px;
+}
+.checkout-btn:hover{
+  color:white;
+  background-color: #51be69;
 
+
+}
+.total-container p> a{
+    text-decoration: underline !important;
+    color: #51be69;
+
+
+}
+.checkout-sumary th{
+    font-weight: lighter;
+    color: #a7a7a7;
+
+}
+.checkout-sumary th tr a img{
+    width: 100px;
+    height: 100px;
+   
+
+}
+.sumary-container>h2{
+    font-family:Orbitron ;
+    font-size: 26px;
+    
+}
 
 
 
@@ -205,5 +306,59 @@ margin: 4px 15px;
    margin: 10px 0; 
   
 
+}
+.qty-container{
+   
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    
+   
+}
+.qty-container .l{
+   
+    background-color: white;
+    display: flex;
+    height: fit-content;
+}
+.qty-container .l button{
+   
+   padding:1px
+}
+.qty-container .quantity-buttons{
+    border: 1px solid black;
+}
+.qty-container .qty{
+   margin: 0 2px;
+   
+}
+
+.check-out-container {
+    margin: 10px auto;
+    padding:10px;
+    width: 100%;
+    background-color: #f5f5f5 ;
+    display :flex;
+    overflow: hidden;
+    
+}
+.total-container{
+    background-color: #f5f5f5 ;
+    padding:20px;
+    margin: 10px auto;
+}
+.check-out-container h3 {
+    margin: 7px;
+    font-size: 10px;
+}
+.row{
+    margin:10px;
+}
+.check-out-container img{
+   display: none;
+}
+.price::before{
+    content: "\a";
+ 
 }
 }

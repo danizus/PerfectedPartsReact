@@ -44,9 +44,9 @@ const Mymodal = (props) => {
     { item.map((product) => ( 
       <div>
       <Modal.Body >
-          <div style={{ borderBottom: "1px solid grey", display: "flex", justifyContent: "space-between" }}>
+          <div style={{ borderBottom: "1px solid grey", display: "flex", justifyContent: "space-between",padding:"20px" }}>
             <div>
-              <div style={{display:"inline"}}><img width="40px" src={product.image} alt="" /></div>
+              <div style={{display:"inline"}}><img width="50px" style={{border:"1px solid grey"}} src={product.image} alt="" /></div>
               <h7 >{`${product.quantity} X ${product.name}`}</h7>
               <p >
               {product.quantity*product.price}
@@ -62,15 +62,17 @@ const Mymodal = (props) => {
           
     
         </Modal.Body>
+      
+     
+   
 
       
       </div>))}
       <Modal.Footer>
           <MyButton text={"close"} />
-          <Link to={`/checkout/${myid}`}><button >Continue shopping</button></Link>
+          <Link to={`/checkout/${item.length}`}><button style={item.length?{display:""}:{display:"none"}} >Buy now</button></Link>
         </Modal.Footer>
-     
-    </Modal>
+      </Modal>
   )
 }
 
