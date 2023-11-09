@@ -11,35 +11,33 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const Checkout = ({show,setShow}) => {
-  const [trackOfChange,setTrackOfChange] = useState(0);
   
+  useEffect(() => {
+    setShow(false)
+  }, []);
   const items = useSelector((state)=>state.cart) 
   const dispatch = useDispatch();
-  const [total,setTotal] = useState(false)
- const findTotal = ()=>{
-  console.log(items)
-  return setTotal(items.reduce((p,item)=>p+item.price*item.quantity,0));
- }
-
+  
+ const total = items.reduce((p,item)=>p+item.price*item.quantity,0).toFixed(2)
+ 
  const incrementproduct = (item)=>{
-  setTrackOfChange(true)
+ 
   dispatch(increment(item))
-  setTrackOfChange(false)
+ 
  
 
  }
 
 const  decrementProduct=(item)=>{
-  setTrackOfChange(true)
+ 
   dispatch(decrement(item))
-  setTrackOfChange(false)
+ 
   
 
  }
- useEffect(() => {
-  findTotal();
-},[trackOfChange]);
+ 
 
   return (
     <>
@@ -73,7 +71,7 @@ const  decrementProduct=(item)=>{
         <div className='price'>
   
           <b>
-Price : {item.price*item.quantity.toFixed(2)}
+Price : {(item.price*item.quantity).toFixed(2)}
 </b>
 </div>
 

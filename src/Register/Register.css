@@ -1,3 +1,17 @@
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+
+
+
 .Register-box{
     margin:  10vh auto ;
     border: 2px solid  #51BE69;
@@ -5,4 +19,124 @@
     width:60%;
     
     border-radius:10px
+}
+
+.form-heading{
+    text-align: center;
+    margin: 40px;
+}
+.error-input{
+    border-color: red;
+}
+button:disabled{
+    opacity: 0.35;
+
+}
+.quantity-change-button{
+    display: flex;
+}
+.light-color-container{
+    background-color: #fff5ee;
+}
+
+.text-second-form{
+    font-family: inter;
+    font-size: 14px;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.conatiner-quantity{
+    max-width: fit-content;
+   
+    display: flex;
+   
+}
+.conatiner-quantity input{
+    width: 2.5rem;
+    height:2.35rem;
+    text-align:center;
+    border: 1px solid grey;
+    
+ 
+    border-radius: 0;
+}
+.conatiner-quantity button{
+    border: 1px solid grey;
+    border-radius: 0;
+
+}
+.conatiner-quantity button:hover{
+    border: 1px solid grey;
+   
+
+}
+.conatiner-quantity input::placeholder{
+    color: black;
+}
+.house-total{
+    color:#51BE69;
+    font-family:Orbitron ;
+    font-size: 20px;
+}
+
+.next-step:hover{
+opacity: 0.9;
+background-color: #10882a;
+}
+.third-form-container div{
+    margin: 3vh auto;
+    
+
+}
+.third-form-container div p{
+   font-weight: lighter;
+   font-family: inter;
+   font-size: 20px;
+   
+
+}
+.third-form-container h3{
+ 
+   font-size: 30px;
+   font-family: inter;
+   color:#51BE69;
+   margin-bottom: 5vh;
+   
+
+}
+.credit-card{
+
+    border: 1px solid grey;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding-left:10px ;
+    border-color: #51BE69;
+
+}
+.credit-card label{
+
+  
+    padding-left:10px ;
+    font-family: inter;
+
+}
+
+@media only screen and (max-width: 992px) {
+    .Register-box{
+      
+        width:100%;
+        padding:0;
+        
+    }
+    .top-text-second-from{
+        display: inline-block;
+        padding: 10px;
+
+ 
+    }
+    .second-form-container .first-div{
+       width: 100%;
+    }
 }

@@ -69,8 +69,8 @@ const Mymodal = (props) => {
       
       </div>))}
       <Modal.Footer>
-          <MyButton text={"close"} />
-          <Link to={`/checkout/${item.length}`}><button style={item.length?{display:""}:{display:"none"}} >Buy now</button></Link>
+         
+         <button style={item.length?{padding:"10px 14px"} :{display:"none"} } className='btn-1'> <Link style={{color:"white"}} to={`/checkout/${item.length}`}>Buy now</Link></button>
         </Modal.Footer>
       </Modal>
   )

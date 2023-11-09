@@ -243,6 +243,8 @@ margin: 4px 15px;
 .checkout-sumary th{
     font-weight: lighter;
     color: #a7a7a7;
+    
+    
 
 }
 .checkout-sumary th tr a img{
@@ -256,7 +258,44 @@ margin: 4px 15px;
     font-size: 26px;
     
 }
+.checkout-sumary{
+    font-family: inter;
+    font-weight: lighter;
+    font-size: 16px;
+}
+.checkout-sumary tbody td:hover{
+    color: #51be69;
+    
+}
+.discount-input {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 5vh 0 2vh 0 ;
+    border: 1px solid black;
+    height: 10%;
+    align-items: center;
 
+}
+
+.discount-input input{
+
+    border: none;
+   width: 100%;
+}
+.discount-input input:focus{
+outline: none;
+  
+}
+.discount-button{
+    background-color: #3b3947;
+    font-family: inter;
+    font-size: 14px;
+    color: white;
+    box-shadow:none ;
+  
+    padding: 8px 48px;
+}
 
 
 @media only screen and (max-width: 992px){
